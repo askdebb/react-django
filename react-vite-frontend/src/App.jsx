@@ -8,9 +8,12 @@ import TopLeftCard from './components/TopLeftCard';
 import RightHomeSectionContainer from './components/RightHomeSectionContainer';
 import Intro from './components/Intro';
 
+
 const App = () => {
   const [schools, setSchools] = useState([]);
   const [selectedSchool, setSelectedSchool] = useState(null);
+  
+
 
   const fetchSchools = async () => {
     const serverURL = `http://127.0.0.1:8000`;
@@ -34,6 +37,7 @@ const App = () => {
         schoolDetail={<RightHomeSectionContainer selectedSchool={selectedSchool} />}
         homeIntro={<Intro />}
       >
+        
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/add-school' element={<AddSchool />} />

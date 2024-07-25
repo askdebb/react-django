@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import './RightHomeSectionContainer.css';
 import Placeholder from 'react-bootstrap/Placeholder';
 
+
 const RightHomeSectionContainer = ({ selectedSchool }) => {
   return (
     <>
@@ -18,7 +19,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
           <Card.Text>
             <Row>
               <Col >
-              <Card className='mx-5 my-2 bg-primary effect' style={{ width: '18rem' , fontSize: '15px' }}>
+              <Card className='mx-5 my-2 bg-primary effect' style={{ width: '17rem' , fontSize: '15px' }}>
                 <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
@@ -32,7 +33,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
 
               </Col>
               <Col>
-              <Card className='mx-5 my-2 bg-info effect' style={{ width: '18rem', fontSize: '15px' }}>
+              <Card className='mx-5 my-2 bg-info effect' style={{ width: '17rem', fontSize: '15px' }}>
                 <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                   <ul style={{listStyle: 'none', textAlign: 'left'}}>
@@ -47,7 +48,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
             </Row>
             <Row>
               <Col>
-              <Card className='mx-5 my-2 bg-warning effect' style={{ width: '18rem' , fontSize: '15px' }}>
+              <Card className='mx-5 my-2 bg-warning effect' style={{ width: '17rem' , fontSize: '15px' }}>
                 <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                   <ul style={{listStyle: 'none', textAlign: 'left'}}>
@@ -60,7 +61,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
               </Card>
               </Col>
               <Col>
-              <Card className='mx-5 my-2 bg-danger effect' style={{ width: '18rem' , fontSize: '15px' }}>
+              <Card className='mx-5 my-2 bg-danger effect' style={{ width: '17rem' , fontSize: '15px' }}>
                 <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                   <ul style={{ listStyle: 'none', textAlign: 'left'}}>
@@ -93,7 +94,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
             
               <Row>
                 <Col>
-                <Card className='mx-5 my-2' style={{ width: '18rem' , fontSize: '15px' }}>
+                <Card className='mx-5 my-2' style={{ width: '17rem' , fontSize: '15px' }}>
                   <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
@@ -112,7 +113,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                   </Card>
                 </Col>
                 <Col>
-                <Card className='mx-5 my-2' style={{ width: '18rem' , fontSize: '15px' }}>
+                <Card className='mx-5 my-2' style={{ width: '17rem' , fontSize: '15px' }}>
                   <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
@@ -133,7 +134,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
               </Row>
               <Row>
                 <Col>
-                <Card className='mx-5 my-2' style={{ width: '18rem' , fontSize: '15px' }}>
+                <Card className='mx-5 my-2' style={{ width: '17rem' , fontSize: '15px' }}>
                   <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
@@ -152,7 +153,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                   </Card>
                 </Col>
                 <Col>
-                <Card className='mx-5 my-2' style={{ width: '18rem' , fontSize: '15px' }}>
+                <Card className='mx-5 my-2' style={{ width: '17rem' , fontSize: '15px' }}>
                   <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>

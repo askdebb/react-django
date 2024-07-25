@@ -2,7 +2,10 @@ import PropTypes from 'prop-types';
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
 import './Layout.css'; 
 
+
+
 const Layout = ({leftCard, schoolDetail, homeIntro }) => {
+  
   return (
     <div className="layout-container">
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -24,6 +27,7 @@ const Layout = ({leftCard, schoolDetail, homeIntro }) => {
       <Container fluid className="my-4 flex-grow-1">
       <div className='my-3 mx-auto container'>
         {homeIntro}
+       
         </div>
         <Row gap={5} className='d-flex justify-content-evenly px-2 py-5 bg-light mx-auto'>
           <Col md={3}>{leftCard}</Col>

@@ -5,8 +5,8 @@
 
 .effect:hover {
     box-shadow: 0 10px 40px #222;
-    width: 18.5rem !important;
-    height: 9rem !important;
+    width: 17rem !important;
+    height: 8rem !important;
     /* transition: ease 0.3ms; */
 }
 
