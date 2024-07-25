@@ -1,7 +1,10 @@
 import BottomLeftCard from "./BottomLeftCard"
 import TopLeftCard from "./TopLeftCard"
 
+
+
 const LeftHomeSectionontainer = () => {
+ 
   return (
 
     <>
@@ -16,4 +19,4 @@ const LeftHomeSectionontainer = () => {
   )
 }
 
-export default LeftHomeSectionontainer
+export default LeftHomeSectionontainer;

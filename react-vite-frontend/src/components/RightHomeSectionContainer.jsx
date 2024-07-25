@@ -1,20 +1,20 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './Intro.css';
 
 
 const RightHomeSectionContainer = () => {
     
   return (
     <>
-    <div className="my-4">RightHomeSectionContainer</div>
     <Card className="text-center shadow-sm">
-      <Card.Header>Featured</Card.Header>
+      <Card.Header className='card-head'>School Name</Card.Header>
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
+        <Card.Title>School Details</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+            ALl the info
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button  className='btn'>Go somewhere</Button>
       </Card.Body>
       <Card.Footer className="text-muted">2 days ago</Card.Footer>
     </Card>

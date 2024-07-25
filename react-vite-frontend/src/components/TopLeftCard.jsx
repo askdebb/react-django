@@ -28,8 +28,8 @@ const TopLeftCard = () => {
 
   return (
     <>
-      <div>TopLeftCard</div>
-      <Card className='rounded shadow-sm' style={{ width: '20rem' }}>
+
+      <Card className='rounded shadow-sm' style={{ width: '20rem', height: '14rem' }}>
         <Card.Body>
           <Card.Title>Choose your School</Card.Title>
           <Card.Text>

@@ -1,21 +1,23 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, Routes } from 'react-router-dom';
-
-import Header from './components/Header';
-import Homepage from './pages/Home/Homepage';
-import AddSchool from './pages/AddSchool/AddSchool';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import AddSchool from './pages/AddSchool';
+import TopLeftCard from './components/TopLeftCard';
+import RightHomeSectionContainer from './components/RightHomeSectionContainer';
+import Intro from './components/Intro';
 
 const App = () => {
   return (
-    <div >
-      <Header />
-      <div className='bg-white h-100vh'>
-        <Routes>
-          <Route index element={<Homepage />} />
-          <Route path="/add-school" element={<AddSchool />} />
-        </Routes>
-      </div>
-    </div>
+    
+    <Router>
+        <Layout leftCard={<TopLeftCard />} schoolDetail={<RightHomeSectionContainer />} homeIntro={<Intro />}>
+          <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/add-school' element={<AddSchool />}/>
+          </Routes>
+        </Layout>
+
+    </Router>
     
   )
 }
