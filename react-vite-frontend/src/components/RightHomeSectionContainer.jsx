@@ -23,7 +23,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                 <Card.Body>
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
-                      <li><b>Year Est:</b> {selectedSchool.year ?? 'N/A'}</li>
+                      <li><b>Year Est:</b> {selectedSchool.year_established ?? 'N/A'}</li>
                       <li><b>Location:</b> {selectedSchool.location ?? 'N/A'}</li>
                       <li><b>GPS Address:</b> {selectedSchool.gps_address ?? 'N/A'}</li>
                     </ul>
@@ -67,7 +67,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                   <ul style={{ listStyle: 'none', textAlign: 'left'}}>
                       <li><b>Type:</b> {selectedSchool.school_type ?? 'N/A'}</li>
                       <li><b>Level:</b> {selectedSchool.level ?? 'N/A'}</li>
-                      <li><b>Core Subject Pst:</b> {selectedSchool.core_subject_position ?? 'N/A'}</li>
+                      <li><b>Core Subject Pst:</b> {selectedSchool.core_subjects_pst ?? 'N/A'}</li>
                     </ul>
                   </Card.Text>
                 </Card.Body>
