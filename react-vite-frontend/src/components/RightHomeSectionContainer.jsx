@@ -67,7 +67,7 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                   <ul style={{ listStyle: 'none', textAlign: 'left'}}>
                       <li><b>Type:</b> {selectedSchool.school_type ?? 'N/A'}</li>
                       <li><b>Level:</b> {selectedSchool.level ?? 'N/A'}</li>
-                      <li><b>Core Subject Pst:</b> {selectedSchool.core_subjects_pst ?? 'N/A'}</li>
+                      <li><b>Core Subjects Pst:</b> {selectedSchool.core_subjects_pst ?? 'N/A'}</li>
                     </ul>
                   </Card.Text>
                 </Card.Body>
@@ -83,12 +83,12 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
         <Card className="text-center shadow-sm">
           <Placeholder as={Card.Header} animation="glow">
           <Placeholder xs={6} />
-          {/* <Card.Header className='card-head'>Loading...</Card.Header> */}
+         
           </Placeholder>
           <Card.Body>
           <Placeholder as={Card.Title} animation="glow">
           <Placeholder xs={4} />
-            {/* <Card.Title>Loading...</Card.Title> */}
+        
             </Placeholder>
             <Placeholder as={Card.Text} animation="glow">
             
@@ -99,13 +99,13 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
                       <li>
-                      <Placeholder xs={6} />{' '}
+                      <Placeholder xs={6} />
                       </li>
                       <li>
-                      <Placeholder xs={7} />{' '}
+                      <Placeholder xs={7} />
                       </li>
                       <li>
-                      <Placeholder xs={6} />{' '}
+                      <Placeholder xs={6} />
                       </li>
                     </ul>
                     </Card.Text>
@@ -118,13 +118,13 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
                       <li>
-                      <Placeholder xs={10} />{' '}
+                      <Placeholder xs={10} />
                       </li>
                       <li>
-                      <Placeholder xs={12} />{' '}
+                      <Placeholder xs={12} />
                       </li>
                       <li>
-                      <Placeholder xs={9} />{' '}
+                      <Placeholder xs={9} />
                       </li>
                     </ul>
                     </Card.Text>
@@ -139,13 +139,13 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
                       <li>
-                      <Placeholder xs={7} />{' '}
+                      <Placeholder xs={7} />
                       </li>
                       <li>
-                      <Placeholder xs={9} />{' '}
+                      <Placeholder xs={9} />
                       </li>
                       <li>
-                      <Placeholder xs={8} />{' '}
+                      <Placeholder xs={8} />
                       </li>
                     </ul>
                     </Card.Text>
@@ -158,13 +158,13 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
                   <Card.Text style={{marginLeft: '-2rem'}}>
                     <ul style={{listStyle: 'none', textAlign: 'left'}}>
                       <li>
-                      <Placeholder xs={7} />{' '}
+                      <Placeholder xs={7} />
                       </li>
                       <li>
-                      <Placeholder xs={9} />{' '}
+                      <Placeholder xs={9} />
                       </li>
                       <li>
-                      <Placeholder xs={12} />{' '}
+                      <Placeholder xs={12} />
                       </li>
                     </ul>
                     </Card.Text>

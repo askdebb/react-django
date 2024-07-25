@@ -1,26 +1,46 @@
+import { useState, useEffect } from "react";
+import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import LeftHomeSectionontainer from '../components/LeftHomeSectionontainer';
 import RightHomeSectionContainer from '../components/RightHomeSectionContainer';
+import Intro from '../components/Intro'
 
-const Homepage = () => {
+const Home = () => {
 
+  const [schools, setSchools] = useState([]);
+  const [selectedSchool, setSelectedSchool] = useState(null);
+  
+  const fetchSchools = async () => {
+    const serverURL = `http://127.0.0.1:8000`;
+
+    try {
+      const res = await axios.get(`${serverURL}/schools`);
+      setSchools(res.data);
+    } catch (error) {
+      console.error('Error fetching schools:', error.response ? error.response.data : error.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchSchools();
+  }, []);
 
   return (
-    <div>
-        <h1>Homepage</h1>
-        <Container fluid>
-      <Row>
+    <div className="mb-4">
+        <Container className="my-5 mx-auto">
+          <Intro />
+        </Container>
+        <Container fluid className="my-4 flex-grow-1">
+      <Row className='d-flex justify-content-evenly px-2 py-5 bg-light mx-auto'>
         <Col sm={3}>
-            <h2>Left Column</h2>
             <div>
-              <LeftHomeSectionontainer />
+              <LeftHomeSectionontainer  schools={schools} selectedSchool={selectedSchool} setSelectedSchool={setSelectedSchool}/>
             </div>
         </Col>
-        <Col sm={9}>
-            <h2>Right Column</h2>
-           <RightHomeSectionContainer /> 
+        <Col sm={8}>
+           <RightHomeSectionContainer selectedSchool={selectedSchool} /> 
 
         </Col>
       </Row>
@@ -29,4 +49,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
+export default Home;

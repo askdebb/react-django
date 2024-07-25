@@ -1,9 +1,11 @@
+import AddSchoolComponent from "../components/AddSchoolComponent";
+
 const AddSchool = () => {
   return (
     <div>
-        AddSchool
+        <AddSchoolComponent />
     </div>
-  )
+  );
 }
 
-export default AddSchool
+export default AddSchool;

@@ -1,16 +1,18 @@
 import BottomLeftCard from "./BottomLeftCard"
 import TopLeftCard from "./TopLeftCard"
+import PropTypes from 'prop-types';
 
 
 
-const LeftHomeSectionontainer = () => {
+const LeftHomeSectionontainer = ( {schools, selectedSchool, setSelectedSchool }) => {
+
+  
  
   return (
 
     <>
-    <div className="mt-4">
-    <div>LeftHomeSectionontainer</div>
-      <TopLeftCard />
+    <div>
+      <TopLeftCard schools={schools} selectedSchool={selectedSchool} setSelectedSchool={setSelectedSchool}/>
       <BottomLeftCard />
     </div>
      
@@ -18,5 +20,11 @@ const LeftHomeSectionontainer = () => {
 
   )
 }
+
+LeftHomeSectionontainer.propTypes = {
+  schools: PropTypes.array.isRequired,
+  selectedSchool: PropTypes.object,
+  setSelectedSchool: PropTypes.func.isRequired
+};
 
 export default LeftHomeSectionontainer;
