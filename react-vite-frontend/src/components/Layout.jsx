@@ -1,7 +1,6 @@
-// src/components/Layout.jsx
 import PropTypes from 'prop-types';
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
-import './Layout.css';  // Import the CSS file
+import './Layout.css'; 
 
 const Layout = ({leftCard, schoolDetail, homeIntro }) => {
   return (

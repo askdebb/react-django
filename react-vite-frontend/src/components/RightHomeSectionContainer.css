@@ -1,0 +1,17 @@
+.effect {
+    box-shadow: 0 3px 3px #000;
+    transition: all 300ms ease-in-out;
+}
+
+.effect:hover {
+    box-shadow: 0 10px 40px #222;
+    width: 18.5rem !important;
+    height: 9rem !important;
+    /* transition: ease 0.3ms; */
+}
+
+
+
+/* .effect:hover {
+    box-shadow: 2px 2px 2px black;
+} */

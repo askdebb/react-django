@@ -1,34 +1,16 @@
-import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
-import axios from 'axios';
 
-const TopLeftCard = () => {
-  const [schools, setSchools] = useState([]);
-  const [selectedSchool, setSelectedSchool] = useState('');
-
-  const fetchSchools = async () => {
-    const serverURL = `http://127.0.0.1:8000`;
-
-    try {
-      const res = await axios.get(`${serverURL}/schools`);
-      setSchools(res.data);
-    } catch (error) {
-      console.error('Error fetching schools:', error.response ? error.response.data : error.message);
-    }
-  };
-
- 
-  useEffect(() => {
-    fetchSchools();
-  }, []); 
+const TopLeftCard = ({ schools, selectedSchool, setSelectedSchool }) => {
 
   const handleChange = (event) => {
-    setSelectedSchool(event.target.value);
+    const selectedSchoolID = parseInt(event.target.value, 10);
+    const selectedSchool = schools.find((school) => school.id === selectedSchoolID);
+    setSelectedSchool(selectedSchool);
   };
 
   return (
     <>
-
       <Card className='rounded shadow-sm' style={{ width: '20rem', height: '14rem' }}>
         <Card.Body>
           <Card.Title>Choose your School</Card.Title>
@@ -37,7 +19,7 @@ const TopLeftCard = () => {
               name="schools"
               id="schools"
               className='form-control'
-              value={selectedSchool}
+              value={selectedSchool ? selectedSchool.id : ''}
               onChange={handleChange}
             >
               <option value="">Select a school</option>
@@ -50,6 +32,12 @@ const TopLeftCard = () => {
       </Card>
     </>
   );
+};
+
+TopLeftCard.propTypes = {
+  schools: PropTypes.array.isRequired,
+  selectedSchool: PropTypes.object,
+  setSelectedSchool: PropTypes.func.isRequired
 };
 
 export default TopLeftCard;
