@@ -7,20 +7,45 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='School',
+            name="School",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('school_name', models.CharField(max_length=100, unique=True)),
-                ('circuit_name', models.CharField(max_length=50)),
-                ('circuit_siso', models.CharField(max_length=50)),
-                ('level', models.CharField(choices=[('BASIC', 'Basic'), ('JHS', 'Jhs'), ('KG', 'Kingdergarten'), ('PRIMARY', 'Primary')], default='KG', max_length=15)),
-                ('school_type', models.CharField(choices=[('PUBLIC', 'Public'), ('PRIVATE', 'Private')], default='PUBLIC', max_length=10)),
-                ('isGALOP', models.BooleanField()),
+                (
+                    "id", models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                        ),
+                ),
+                ("school_name", models.CharField(max_length=100, unique=True)),
+                ("circuit_name", models.CharField(max_length=50)),
+                ("circuit_siso", models.CharField(max_length=50)),
+                (
+                    "level",
+                    models.CharField(
+                        choices=[
+                            ("BASIC", "Basic"),
+                            ("JHS", "Jhs"),
+                            ("KG", "Kingdergarten"),
+                            ("PRIMARY", "Primary"),
+                        ],
+                        default="KG",
+                        max_length=15
+                    ),
+                ),
+                (
+                    "school_type",
+                    models.CharField(
+                        choices=[("PUBLIC", "Public"), ("PRIVATE", "Private")],
+                        default="PUBLIC",
+                        max_length=10,
+                    ),
+                ),
+                ("isGALOP", models.BooleanField()),
             ],
         ),
     ]

@@ -7,63 +7,128 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('django_backend', '0001_initial'),
+        ("django_backend", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Circuit_INFO',
+            name="Circuit_INFO",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('circuit_name_info', models.CharField(choices=[('Adenta', 'Adenta'), ('Adjiringanor', 'Adjiringanor'), ('Nmai Dzorn', 'Nmai Dzorn'), ('Botwe', 'Botwe')], default='Adjiringanor', max_length=20)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False, 
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "circuit_name_info",
+                    models.CharField(
+                        choices=[
+                            ("Adenta", "Adenta"),
+                            ("Adjiringanor", "Adjiringanor"),
+                            ("Nmai Dzorn", "Nmai Dzorn"), 
+                            ("Botwe", "Botwe"),
+                        ], 
+                        default="Adjiringanor",
+                        max_length=20,
+                    ),
+                ),
             ],
             options={
-                'verbose_name_plural': 'Circuit Information',
+                "verbose_name_plural": "Circuit Information",
             },
         ),
         migrations.RemoveField(
-            model_name='school',
-            name='circuit_siso',
+            model_name="school",
+            name="circuit_siso",
         ),
         migrations.AlterField(
-            model_name='school',
-            name='isGALOP',
-            field=models.BooleanField(verbose_name='Is Galop'),
+            model_name="school",
+            name="isGALOP",
+            field=models.BooleanField(verbose_name="Is Galop"),
         ),
         migrations.AlterField(
-            model_name='school',
-            name='level',
-            field=models.CharField(choices=[('KG', 'Kingdergarten'), ('BASIC', 'Basic'), ('JHS', 'JHS'), ('PRIMARY', 'Primary')], default='KG', max_length=15, verbose_name='School Level'),
+            model_name="school",
+            name="level",
+            field=models.CharField(
+                choices=[
+                    ("KG", "Kingdergarten"),
+                    ("BASIC", "Basic"),
+                    ("JHS", "JHS"),
+                    ("PRIMARY", "Primary"),
+                ],
+                default="KG",
+                max_length=15,
+                verbose_name="School Level",
+            ),
         ),
         migrations.AlterField(
-            model_name='school',
-            name='school_name',
-            field=models.CharField(max_length=100, unique=True, verbose_name='School Name'),
+            model_name="school",
+            name="school_name",
+            field=models.CharField(
+                max_length=100, unique=True, verbose_name="School Name"
+            ),
         ),
         migrations.AlterField(
-            model_name='school',
-            name='school_type',
-            field=models.CharField(choices=[('Public', 'Public'), ('Public', 'Private')], default='Public', max_length=10, verbose_name='School Type'),
+            model_name="school",
+            name="school_type",
+            field=models.CharField(
+                choices=[("Public", "Public"), ("Public", "Private")], default="Public",
+                max_length=10,
+                verbose_name="School Type",
+            ),
         ),
         migrations.AlterField(
-            model_name='school',
-            name='circuit_name',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='django_backend.circuit_info'),
+            model_name="school",
+            name="circuit_name",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE, to='django_backend.circuit_info',
+            ),
         ),
         migrations.CreateModel(
-            name='SISO',
+            name="SISO",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('siso_name_info', models.CharField(choices=[('Florence Kushitor', 'Florence Kushitor'), ('Isaac Paintsil', 'Isaac Paintsil'), ('Joana Kumi', 'Joana Kumi'), ('Kingsley David', 'Kingsley David')], default='Florence Kushitor', max_length=50)),
-                ('circuit_name', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='django_backend.circuit_info')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "siso_name_info",
+                    models.CharField(
+                        choices=[
+                            ("Florence Kushitor", "Florence Kushitor"), ("Isaac Paintsil", "Isaac Paintsil"),
+                            ("Joana Kumi", "Joana Kumi"),
+                            ("Kingsley David", "Kingsley David"),
+                        ],
+                        default="Florence Kushitor",
+                        max_length=50,
+                    ),
+                ),
+                (
+                    "circuit_name",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE, to="django_backend.circuit_info",
+                    ),
+                ),
             ],
             options={
-                'verbose_name_plural': "SISO's Information",
+                "verbose_name_plural": "SISO's Information",
             },
         ),
         migrations.AddField(
-            model_name='school',
-            name='siso_name',
-            field=models.OneToOneField(default='', on_delete=django.db.models.deletion.CASCADE, to='django_backend.siso'),
+            model_name="school",
+            name="siso_name",
+            field=models.OneToOneField(
+                default="",
+                on_delete=django.db.models.deletion.CASCADE, to="django_backend.siso",
+            ),
         ),
     ]
