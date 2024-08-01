@@ -1,4 +1,4 @@
-import Carousel from "../components/Carousel";
+import CarouselSilder from "../components/CarouselSilder";
 import Header from "../components/Header";
 
 const Landing = () => {
@@ -6,7 +6,7 @@ const Landing = () => {
     <>
   
     <Header />
-    <Carousel />
+    <CarouselSilder />
     <div>Landing</div>
     
     </>
