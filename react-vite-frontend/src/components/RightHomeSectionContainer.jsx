@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./Intro.css";
 import PropTypes from "prop-types";
@@ -125,9 +124,9 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
               </Row>
             </Card.Text>
           </Card.Body>
-          <Card.Footer>
+          {/* <Card.Footer>
             <Button className="btn">Read more</Button>
-          </Card.Footer>
+          </Card.Footer> */}
         </Card>
       ) : (
         <Card className="text-center shadow-sm">
@@ -233,9 +232,9 @@ const RightHomeSectionContainer = ({ selectedSchool }) => {
               </Row>
             </Placeholder>
           </Card.Body>
-          <Card.Footer>
+          {/* <Card.Footer>
             <Placeholder.Button variant="primary" xs={2} />
-          </Card.Footer>
+          </Card.Footer> */}
         </Card>
       )}
     </>

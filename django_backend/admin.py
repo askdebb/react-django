@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import School
+from .models import School, MunicipalImages
 
 # Register your models here.
 
@@ -12,4 +12,11 @@ class SchoolAdmin(admin.ModelAdmin):
         "siso_name",
         "level",
         "school_type",
+    )
+    
+@admin.register(MunicipalImages)
+class MunicipalImagesAdmin(admin.ModelAdmin):
+    list_display = (
+        "title",
+        "image"
     )

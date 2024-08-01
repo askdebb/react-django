@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
     <Container>
-      <Navbar.Brand href="/">School Profiler</Navbar.Brand>
+      <Navbar.Brand href="/school-profile">School Profiler</Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
         <Nav
@@ -14,7 +14,8 @@ const NavBar = () => {
           style={{ maxHeight: '100px' }}
           navbarScroll
         >
-          <Nav.Link href="/add-school">Add School</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/school-profile/add-school">Add School</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>

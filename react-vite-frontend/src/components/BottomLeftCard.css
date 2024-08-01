@@ -1,0 +1,13 @@
+.btn.btn-primary{
+    background-color: #39b7e9 !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 10px 5px !important;
+    width: 20rem !important;
+    margin: 0  auto !important;
+    font-size: 1.5rem;
+}
+.btn.btn-primary:hover{
+    background-color: rgb(16, 157, 212) !important;
+ 
+}

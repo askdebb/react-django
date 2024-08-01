@@ -46,3 +46,12 @@ class School(models.Model):
     
     def __str__(self) -> str:
         return self.school_name
+    
+    
+    
+class MunicipalImages(models.Model):
+    title = models.CharField(max_length=250, blank=False)
+    image = models.ImageField(upload_to='municipal-images/')
+    
+    def __str__(self) -> str:
+        return self.title
